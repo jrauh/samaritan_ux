@@ -1,0 +1,215 @@
+$color--sass: #CF649A;
+$color--git:  #F74E27;
+
+.subnav {
+  background-color: rgba($gray-150c, .5);
+  display: block;
+  padding: 0 1rem;
+  width: 100%;
+  li {
+    @include user-select(none);
+    border-bottom: 2px solid transparent;
+    color: $gray-600c;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    &.visited {
+      color: $gray-300c;
+      cursor: pointer;
+      margin-right: 1rem;
+      position: relative;
+      &:hover {
+        background-color: $gray-150c;
+        border-bottom-color: $color--sass;
+        color: $gray-600c;
+      }
+      &:after {
+        content: ">";
+        color: $gray-250c;
+        font-family: "Inconsolata", monospace;
+        margin-top: 0.1rem;
+        pointer-events: none;
+        position: absolute;
+        right: -0.8rem;
+      }
+    }
+  }
+}
+
+//GRID
+.column {
+  float: left;
+  width: 100%;
+}
+
+.column--learn {
+  @extend .column;
+  width: 50%;
+  @media #{$tablet} {
+    width: (100% / 3);
+  }
+}
+
+.card {
+  @include user-select(none);
+  background-color: $white;
+  border: solid $gray-150c;
+  border-width: 0 0 4px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 2rem 1rem;;
+  margin-bottom: 1rem;
+  width: 100%;
+  display: inline-block;
+  &:active {
+    @include box-shadow(inset 0 3px 5px rgba(0, 0, 0, 0.15));
+    background-color: rgb(250, 250, 250);
+    border: none;
+    outline: none !important;
+    transition: none;
+  }
+  &.sass { border-bottom-color: $color--sass; }
+  &.git { border-bottom-color: $color--git; }
+  @media #{$tablet} {
+    padding: 4rem 1rem;
+  }
+}
+
+section {
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $gray-700c;
+}
+
+a {
+  &.inline {
+    border-bottom: 1px solid rgba($blue-500, .8);
+    color: $blue-500;
+    font-weight: 600;
+    padding-bottom: 2px;
+    &:hover {
+      opacity: .6;
+    }
+  }
+}
+
+p {
+  color: $gray-700c;
+  font-size: 16px;
+  line-height: 1.5rem;
+  .code-block {
+    background-color: rgba($gray-150, .5);
+    border: 1px solid $gray-250;
+    border-radius: 3px;
+    font-family: monaco, 'Inconsolata', sans-serif;
+    font-size: 0.8rem;
+    padding: 0rem 0.2rem 0.1rem;
+    margin: -0.2rem 0;
+  }
+}
+
+header {
+  &.hero {
+    background-color: $white;
+    border: none;
+    height: auto;
+    padding: 2rem;
+    position: static;
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  }
+}
+
+h1, h2, h3, h4 {
+  &.bower, .bower & { color: #F1623B; } //#FFD235
+  &.sass, .sass & { color: $color--sass; }
+  &.git, .git & { color: $color--git; }
+}
+
+.code {
+  background-color: rgba($gray-900c, .9);
+  border-radius: 5px;
+  color: $white;
+  font-family: monaco, 'Inconsolata', sans-serif;
+  font-size: $font-size-small;
+  font-weight: 600;
+  line-height: 1.2rem;
+  padding: 0.8rem 1rem;
+  position: relative;
+  margin: 0.5rem 0 4rem 0;
+
+  .row { padding: 0; }
+
+  ::selection { background-color: $gray-200c; }
+
+  &.code--scss,
+  &.code--css,
+  &.code--html {
+    &:before {
+      content: "";
+      border-radius: 3px;
+      color: $gray-900c;
+      line-height: 1rem;
+      opacity: .9;
+      padding: 0.2rem 0.2rem 0.3rem;
+      position: absolute;
+      top: 0.5rem; right: 0.5rem;
+    }
+  }
+
+  &.code--scss,
+  &.code--html {
+    margin-bottom: 1.5rem;
+  }
+
+  &.code--html:before {
+    content: "html";
+    background-color: $gray-300c;
+  }
+
+  &.code--scss:before {
+    content: "scss";
+    background-color: rgb(220, 165, 208);
+  }
+
+  &.code--css:before {
+    content: "css";
+    background-color: $yellow-500;
+  }
+
+  .code__arrow {
+    @include user-select(none);
+    font-size: $font-size-normal;
+  }
+
+  .code_number {
+    @include user-select(none);
+    background-color: rgba($gray-700c, .8);
+    border-radius: 5px 0 0 5px;
+    color: $gray-300c;
+    float: left;
+    margin: -0.8rem 1rem 0 -1rem;
+    padding: 0.8rem;
+    text-align: right;
+    width: 2.5rem;
+  }
+
+  .code_text {
+    margin: 0 -1rem 0 1.5rem;
+    li:hover { background-color: rgba($gray-700c, .5); }
+  }
+
+  .green { color: $green-300; }
+  .red { color: $red-300; }
+  .blue { color: $blue-300; }
+  .orange { color: $orange-200; }
+  .yellow { color: $yellow-200; }
+  .purple { color: $purple-50; }
+}

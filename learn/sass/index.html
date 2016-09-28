@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn Sass</title>
+  <link rel="stylesheet" type="text/css" href="../../styles/styles.css">
+</head>
+
+<body class="blog">
+
+<header class="hero">
+  <h1 class="sass">
+    Learn Sass
+  </h1>
+</header>
+
+<section class="row center-align" style="margin-top: 1rem;">
+  <h1>Sass Setup</h1>
+</section>
+
+<section class="row">
+  <h2>Install Sass</h2>
+  <p>If you're on a Mac, installing sass is extremely easy and can be done in just a few steps. Open your terminal and type in the following commands to install the Ruby Gem:</p>
+  <div class="code">
+    <div class="row">
+      <span class="code__arrow red">&#8594; </span>
+      gem install sass
+    </div>
+    <div class="row">
+      <span class="code__arrow green">&#8594; </span>
+      sudo gem install sass
+    </div>
+    <div class="row">
+      <span class="code__arrow green">&#8594; </span>
+      sass -v
+    </div>
+  </div>
+
+  <h2>Set up your project</h2>
+  <p>Before you start using sass, it may be helpful to install <a class="inline" href="https://git-scm.com/" target="blank">git</a>, which will allow you to quickly and efficiently manage your project files. Here are a few quick commands to get you going:</p>
+  <div class="code">
+    <div class="row">
+      <span class="code__arrow green">&#8594; </span>
+      git init new-project
+    </div>
+    <div class="row">
+      <span class="code__arrow green">&#8594; </span>
+      cd new-project
+    </div>
+    <div class="row">
+      <span class="code__arrow green">&#8594; </span>
+      touch index.html styles.css styles.scss
+    </div>
+  </div>
+
+  <h2>Compile sass to css</h2>
+  <p>Now that you have your files ready to go, you can start editing your stylesheet. Keep in mind, all of your edits will be done through your .scss file, never in your .css file. Run this command to compile your sass into css, then open your index file to view your changes.</p>
+  <div class="code">
+    <div class="row">
+      <span class="code__arrow green">&#8594; </span>
+      sass -w input.scss:output.css
+    </div>
+    <div class="row">
+      <span class="code__arrow green">&#8594; </span>
+      open index.html
+    </div>
+  </div>
+</section>
+
+<section class="row center-align" style="margin-top: 1rem;">
+  <h1>The Basics</h1>
+</section>
+
+<section class="row">
+  <h2>Nesting & Parent Selectors</h2>
+  <p>Nesting within Sass allows for a cleaner interface, as it helps avoid having to consistently type out the name of your parent selector. If you ever need to specifically target where the parent selector should be placed, the <span class="code-block">&</span> symbol will allow you to determine that placement.</p>
+  <div class="code code--html">
+    <ul class="code_number">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+    <ul class="code_text">
+      <li>&lt;div class="card small"&gt;</li>
+      <li>&nbsp;&nbsp;&lt;h3 class="title"&gt;</li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;Title</li>
+      <li>&nbsp;&nbsp;&lt;/h3&gt;</li>
+      <li>&lt;/div&gt;</li>
+    </ul>
+  </div>
+
+  <div class="code code--scss">
+    <ul class="code_number">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+      <li>11</li>
+      <li>12</li>
+      <li>13</li>
+      <li>14</li>
+      <li>15</li>
+      <li>16</li>
+    </ul>
+    <ul class="code_text">
+      <li>.card {</li>
+      <li>&nbsp;&nbsp;background-color: #FFF;</li>
+      <li>&nbsp;&nbsp;width: 15rem;</li>
+      <li>&nbsp;</li>
+      <li>&nbsp;&nbsp;<span class="blue">&</span>:hover {</li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;opacity: .8;</li>
+      <li>&nbsp;&nbsp;}</li>
+      <li>&nbsp;</li>
+      <li>&nbsp;&nbsp;<span class="blue">&</span>.small {</li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;width: 10rem;</li>
+      <li>&nbsp;&nbsp;}</li>
+      <li>&nbsp;</li>
+      <li>&nbsp;&nbsp;.title {</li>
+      <li>&nbsp;&nbsp;&nbsp;&nbsp;font-size: 1.2rem;</li>
+      <li>&nbsp;&nbsp;}</li>
+      <li>}</li>
+    </ul>
+  </div>
+
+  <div class="code code--css">
+    <ul class="code_number">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+      <li>11</li>
+      <li>12</li>
+      <li>13</li>
+      <li>14</li>
+      <li>15</li>
+      <li>16</li>
+    </ul>
+    <ul class="code_text">
+      <li>.card {</li>
+      <li>&nbsp;&nbsp;background-color: #FFF;</li>
+      <li>&nbsp;&nbsp;width: 15rem;</li>
+      <li>}</li>
+      <li>&nbsp;</li>
+      <li>.card:hover {</li>
+      <li>&nbsp;&nbsp;opacity: .8;</li>
+      <li>}</li>
+      <li>&nbsp;</li>
+      <li>.card.small {</li>
+      <li>&nbsp;&nbsp;width: 10rem;</li>
+      <li>}</li>
+      <li>&nbsp;</li>
+      <li>.card .title {</li>
+      <li>&nbsp;&nbsp;font-size: 1.2rem;</li>
+      <li>}</li>
+    </ul>
+  </div>
+
+  <h2>Variables</h2>
+  <p>Variables offer a quick shortcut that can be reused throughout your stylesheet. By referencing the <span class="code-block">$</span> symbol, you are able to create a substitute that can be utilized anywhere within your project.</p>
+  <div class="code code--scss">
+    <ul class="code_number">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+    <ul class="code_text">
+      <li><span class="purple">$primary-color</span>: #6A8DD3;</li>
+      <li>&nbsp;</li>
+      <li>.card {</li>
+      <li>&nbsp;&nbsp;border-color: <span class="purple">$primary-color</span>;</li>
+      <li>}</li>
+    </ul>
+  </div>
+
+  <div class="code code--css">
+    <ul class="code_number">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <ul class="code_text">
+      <li>.card {</li>
+      <li>&nbsp;&nbsp;border-color: #6A8DD3;</li>
+      <li>}</li>
+    </ul>
+  </div>
+
+  <h2>Mixins</h2>
+  <p>One easy way to use the <span class="code-block">@mixin</span> directive is to apply it for vendor prefixed elements. To create a mixin, simply define a mixin name and a variable, which will be passed to each vendor prefix. This can now be referenced anywhere within your project by using an <span class="code-block">@include</span>, followed by the mixin name and a desired value.</p>
+  <div class="code code--scss">
+    <ul class="code_number">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+      <li>11</li>
+    </ul>
+    <ul class="code_text">
+      <li><span class="blue">@mixin</span> user-select($value) {</li>
+      <li>&nbsp;&nbsp;-webkit-user-select: $value;</li>
+      <li>&nbsp;&nbsp;-moz-user-select: $value;</li>
+      <li>&nbsp;&nbsp;-ms-user-select: $value;</li>
+      <li>&nbsp;&nbsp;-o-user-select: $value;</li>
+      <li>&nbsp;&nbsp;user-select: $value;</li>
+      <li>}</li>
+      <li>&nbsp;&nbsp;</li>
+      <li>.card {</li>
+      <li>&nbsp;&nbsp;<span class="blue">@include</span> user-select(none);</li>
+      <li>}</li>
+    </ul>
+  </div>
+
+  <div class="code code--css">
+    <ul class="code_number">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+    </ul>
+    <ul class="code_text">
+      <li>.card {</li>
+      <li>&nbsp;&nbsp;-webkit-user-select: none;</li>
+      <li>&nbsp;&nbsp;-moz-user-select: none;</li>
+      <li>&nbsp;&nbsp;-ms-user-select: none;</li>
+      <li>&nbsp;&nbsp;-o-user-select: none;</li>
+      <li>&nbsp;&nbsp;user-select: none;</li>
+      <li>}</li>
+    </ul>
+  </div>
+
+  <h2>Extend</h2>
+  <p>The <span class="code-block">@extend</span> function allows one selector to inherit the styles of another selector. This can be especially useful when one class utilizes all of another class's styles, along with some of its own specific styles.</p>
+  <div class="code code--scss">
+    <ul class="code_number">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+      <li>11</li>
+    </ul>
+    <ul class="code_text">
+      <li>.column {</li>
+      <li>&nbsp;&nbsp;padding: 1rem;</li>
+      <li>&nbsp;&nbsp;float: left;</li>
+      <li>&nbsp;&nbsp;margin: 0;</li>
+      <li>&nbsp;&nbsp;width: 100%;</li>
+      <li>}</li>
+      <li>&nbsp;</li>
+      <li>.column-half {</li>
+      <li>&nbsp;&nbsp;<span class="orange">@extend</span> .column;</li>
+      <li>&nbsp;&nbsp;width: 50%;</li>
+      <li>}</li>
+    </ul>
+  </div>
+  <div class="code code--css">
+    <ul class="code_number">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li>10</li>
+    </ul>
+    <ul class="code_text">
+      <li>.column, .column-half {</li>
+      <li>&nbsp;&nbsp;padding: 1rem;</li>
+      <li>&nbsp;&nbsp;float: left;</li>
+      <li>&nbsp;&nbsp;margin: 0;</li>
+      <li>&nbsp;&nbsp;width: 100%;</li>
+      <li>}</li>
+      <li>&nbsp;</li>
+      <li>.column-half {</li>
+        <li>&nbsp;&nbsp;width: 50%;</li>
+      <li>}</li>
+    </ul>
+  </div>
+</section>
+
+</body>
+</html>

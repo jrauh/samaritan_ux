@@ -1,0 +1,21 @@
+{
+  "name": "samaritan_ux",
+  "homepage": "https://github.com/jrauh/samaritan_ux",
+  "authors": [
+    "Jared Rauh <jared.rauh@samaritanministrires.org>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dashing": "^0.3.15-beta"
+  }
+}
