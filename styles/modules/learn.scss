@@ -1,51 +1,19 @@
 $color--sass: #CF649A;
 $color--git:  #F74E27;
 $color--html: $gray-800;
-.subnav {
-  background-color: rgba($gray-150c, .5);
-  display: block;
-  padding: 0 1rem;
-  width: 100%;
-  li {
-    @include user-select(none);
-    border-bottom: 2px solid transparent;
-    color: $gray-600c;
-    display: inline-block;
-    font-size: 0.9rem;
-    font-weight: 600;
-    padding: 0.5rem;
-    text-transform: uppercase;
-    &.visited {
-      color: $gray-300c;
-      cursor: pointer;
-      margin-right: 1rem;
-      position: relative;
-      &:hover {
-        background-color: $gray-150c;
-        border-bottom-color: $color--sass;
-        color: $gray-600c;
-      }
-      &:after {
-        content: ">";
-        color: $gray-250c;
-        font-family: "Inconsolata", monospace;
-        margin-top: 0.1rem;
-        pointer-events: none;
-        position: absolute;
-        right: -0.8rem;
-      }
-    }
-  }
+$color--css: #7FDBFF;
+$color--bower: #FFCC2F;
+
+.hero .button {
+  position: absolute;
+  top: 2.5rem;
+  left: 2rem;
 }
 
 //GRID
-.column {
-  float: left;
-  width: 100%;
-}
-
 .column--learn {
   @extend .column;
+  float: left;
   width: 50%;
   @media #{$tablet} {
     width: (100% / 3);
@@ -59,28 +27,28 @@ $color--html: $gray-800;
   border-width: 0 0 4px 0;
   border-radius: 5px;
   cursor: pointer;
-  padding: 2rem 1rem;;
-  margin-bottom: 1rem;
+  margin: 0;
+  padding: 3rem 1rem;;
   width: 100%;
   display: inline-block;
-  &:active {
-    @include box-shadow(inset 0 3px 5px rgba(0, 0, 0, 0.15));
-    background-color: rgb(250, 250, 250);
-    border: none;
-    outline: none !important;
-    transition: none;
-  }
+  
   &.sass { border-bottom-color: $color--sass; }
   &.git { border-bottom-color: $color--git; }
   &.html { border-bottom-color: $color--html; }
+  &.css { border-bottom-color: $color--css; }
+  &.bower { border-bottom-color: $color--bower; }
+
+  &:active {
+    @include box-shadow(inset 0 3px 5px rgba(0, 0, 0, 0.15));
+    background-color: rgb(250, 250, 250);
+    border-bottom-color: transparent;
+    outline: none !important;
+    transition: none;
+  }
+
   @media #{$tablet} {
     padding: 4rem 1rem;
   }
-}
-
-section {
-  margin-top: 1rem;
-  padding: 1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -129,10 +97,11 @@ header {
 }
 
 h1, h2, h3, h4 {
-  &.bower, .bower & { color: #F1623B; } //#FFD235
+  &.bower, .bower & { color: $color--bower; } //#FFD235
   &.sass, .sass & { color: $color--sass; }
   &.git, .git & { color: $color--git; }
   &.html, .html & { color: $color--html; }
+  &.css, .css & { color: $color--css; }
 }
 
 .code {

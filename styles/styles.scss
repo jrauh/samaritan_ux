@@ -3,3 +3,8 @@
 
 @import "base/base";
 @import "modules/modules";
+
+@font-face{
+  font-family:'dashing-icons';
+  src:url("../bower_components/dashing/font/dashing-icons.woff") format("woff")
+}
