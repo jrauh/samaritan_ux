@@ -2463,6 +2463,12 @@ body.blog .row {
     border-bottom-color: #7FDBFF; }
   .card.bower {
     border-bottom-color: #FFCC2F; }
+  .card.disabled {
+    border-bottom-color: #BABABA;
+    cursor: not-allowed;
+    opacity: .5; }
+    .card.disabled h2 {
+      color: #A1A1A1; }
   .card:active {
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.15);
@@ -2471,12 +2477,28 @@ body.blog .row {
     border-bottom-color: transparent;
     outline: none !important;
     transition: none; }
+    .card:active h2 {
+      margin-top: 4px;
+      margin-bottom: -4px; }
   @media all and (min-width: 40em) {
     .card {
       padding: 4rem 1rem; } }
 
+section {
+  padding: 1rem 0 !important; }
+
 h1, h2, h3, h4, h5, h6 {
   color: #575D64; }
+  h1.bower, .bower h1, h2.bower, .bower h2, h3.bower, .bower h3, h4.bower, .bower h4, h5.bower, .bower h5, h6.bower, .bower h6 {
+    color: #FFCC2F; }
+  h1.sass, .sass h1, h2.sass, .sass h2, h3.sass, .sass h3, h4.sass, .sass h4, h5.sass, .sass h5, h6.sass, .sass h6 {
+    color: #CF649A; }
+  h1.git, .git h1, h2.git, .git h2, h3.git, .git h3, h4.git, .git h4, h5.git, .git h5, h6.git, .git h6 {
+    color: #F74E27; }
+  h1.html, .html h1, h2.html, .html h2, h3.html, .html h3, h4.html, .html h4, h5.html, .html h5, h6.html, .html h6 {
+    color: #3B3B3B; }
+  h1.css, .css h1, h2.css, .css h2, h3.css, .css h3, h4.css, .css h4, h5.css, .css h5, h6.css, .css h6 {
+    color: #7FDBFF; }
 
 a.inline {
   border-bottom: 1px solid rgba(106, 141, 211, 0.8);
@@ -2508,17 +2530,6 @@ header.hero {
   header.hero h1 {
     font-size: 2.5rem;
     text-align: center; }
-
-h1.bower, .bower h1, h2.bower, .bower h2, h3.bower, .bower h3, h4.bower, .bower h4 {
-  color: #FFCC2F; }
-h1.sass, .sass h1, h2.sass, .sass h2, h3.sass, .sass h3, h4.sass, .sass h4 {
-  color: #CF649A; }
-h1.git, .git h1, h2.git, .git h2, h3.git, .git h3, h4.git, .git h4 {
-  color: #F74E27; }
-h1.html, .html h1, h2.html, .html h2, h3.html, .html h3, h4.html, .html h4 {
-  color: #3B3B3B; }
-h1.css, .css h1, h2.css, .css h2, h3.css, .css h3, h4.css, .css h4 {
-  color: #7FDBFF; }
 
 .code {
   background-color: rgba(36, 41, 44, 0.9);
