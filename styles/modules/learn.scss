@@ -1,6 +1,6 @@
 $color--sass: #CF649A;
 $color--git:  #F74E27;
-
+$color--html: $gray-800;
 .subnav {
   background-color: rgba($gray-150c, .5);
   display: block;
@@ -72,6 +72,7 @@ $color--git:  #F74E27;
   }
   &.sass { border-bottom-color: $color--sass; }
   &.git { border-bottom-color: $color--git; }
+  &.html { border-bottom-color: $color--html; }
   @media #{$tablet} {
     padding: 4rem 1rem;
   }
@@ -131,6 +132,7 @@ h1, h2, h3, h4 {
   &.bower, .bower & { color: #F1623B; } //#FFD235
   &.sass, .sass & { color: $color--sass; }
   &.git, .git & { color: $color--git; }
+  &.html, .html & { color: $color--html; }
 }
 
 .code {

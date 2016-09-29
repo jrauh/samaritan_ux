@@ -2499,6 +2499,8 @@ body.blog .row {
     border-bottom-color: #CF649A; }
   .card.git {
     border-bottom-color: #F74E27; }
+  .card.html {
+    border-bottom-color: #3B3B3B; }
   @media all and (min-width: 40em) {
     .card {
       padding: 4rem 1rem; } }
@@ -2547,6 +2549,8 @@ h1.sass, .sass h1, h2.sass, .sass h2, h3.sass, .sass h3, h4.sass, .sass h4 {
   color: #CF649A; }
 h1.git, .git h1, h2.git, .git h2, h3.git, .git h3, h4.git, .git h4 {
   color: #F74E27; }
+h1.html, .html h1, h2.html, .html h2, h3.html, .html h3, h4.html, .html h4 {
+  color: #3B3B3B; }
 
 .code {
   background-color: rgba(36, 41, 44, 0.9);
