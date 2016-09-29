@@ -2500,6 +2500,66 @@ h1, h2, h3, h4, h5, h6 {
   h1.css, .css h1, h2.css, .css h2, h3.css, .css h3, h4.css, .css h4, h5.css, .css h5, h6.css, .css h6 {
     color: #7FDBFF; }
 
+.button-transparent.button--bower {
+  background-color: rgba(255, 255, 255, 0);
+  color: #FFCC2F; }
+  .button-transparent.button--bower:hover, .button-transparent.button--bower:focus {
+    opacity: .6; }
+  .button-transparent.button--bower:active {
+    opacity: .9; }
+  .button-transparent.button--bower .dashing-icon:before {
+    color: #FFCC2F; }
+  .button-transparent.button--bower:hover {
+    color: #FFCC2F; }
+
+.button--transparent.button--sass {
+  background-color: rgba(255, 255, 255, 0);
+  color: #CF649A; }
+  .button--transparent.button--sass:hover, .button--transparent.button--sass:focus {
+    opacity: .6; }
+  .button--transparent.button--sass:active {
+    opacity: .9; }
+  .button--transparent.button--sass .dashing-icon:before {
+    color: #CF649A; }
+  .button--transparent.button--sass:hover {
+    color: #CF649A; }
+
+.button--transparent.button--git {
+  background-color: rgba(255, 255, 255, 0);
+  color: #F74E27; }
+  .button--transparent.button--git:hover, .button--transparent.button--git:focus {
+    opacity: .6; }
+  .button--transparent.button--git:active {
+    opacity: .9; }
+  .button--transparent.button--git .dashing-icon:before {
+    color: #F74E27; }
+  .button--transparent.button--git:hover {
+    color: #F74E27; }
+
+.button--transparent.button--html {
+  background-color: rgba(255, 255, 255, 0);
+  color: #3B3B3B; }
+  .button--transparent.button--html:hover, .button--transparent.button--html:focus {
+    opacity: .6; }
+  .button--transparent.button--html:active {
+    opacity: .9; }
+  .button--transparent.button--html .dashing-icon:before {
+    color: #3B3B3B; }
+  .button--transparent.button--html:hover {
+    color: #3B3B3B; }
+
+.button--transparent.button--css {
+  background-color: rgba(255, 255, 255, 0);
+  color: #7FDBFF; }
+  .button--transparent.button--css:hover, .button--transparent.button--css:focus {
+    opacity: .6; }
+  .button--transparent.button--css:active {
+    opacity: .9; }
+  .button--transparent.button--css .dashing-icon:before {
+    color: #7FDBFF; }
+  .button--transparent.button--css:hover {
+    color: #7FDBFF; }
+
 a.inline {
   border-bottom: 1px solid rgba(106, 141, 211, 0.8);
   color: #6A8DD3;

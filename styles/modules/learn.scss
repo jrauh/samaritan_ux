@@ -65,13 +65,48 @@ section {
   padding: 1rem 0 !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6{
   color: $gray-700c;
   &.bower, .bower & { color: $color--bower; } //#FFD235
   &.sass, .sass & { color: $color--sass; }
   &.git, .git & { color: $color--git; }
   &.html, .html & { color: $color--html; }
   &.css, .css & { color: $color--css; }
+}
+
+.button-transparent.button--bower {
+  @include transparent--button($color--bower);
+  &:hover {
+    color: $color--bower;
+  }
+}
+
+.button--transparent.button--sass {
+  @include transparent--button($color--sass);
+  &:hover {
+    color: $color--sass;
+  }
+}
+
+.button--transparent.button--git {
+  @include transparent--button($color--git);
+  &:hover {
+    color: $color--git;
+  }
+}
+
+.button--transparent.button--html {
+  @include transparent--button($color--html);
+  &:hover {
+    color: $color--html;
+  }
+}
+
+.button--transparent.button--css {
+  @include transparent--button($color--css);
+  &:hover {
+    color: $color--css;
+  }
 }
 
 a {
