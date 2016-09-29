@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Learn Sass</title>
   <link rel="stylesheet" type="text/css" href="../../styles/styles.css">
+  <script src="../../scripts/prism.js"></script>
 </head>
 
 <body class="blog">
@@ -26,50 +27,20 @@
 <section class="row">
   <h2>Install Sass</h2>
   <p>If you're on a Mac, installing sass is extremely easy and can be done in just a few steps. Open your terminal and type in the following commands to install the Ruby Gem:</p>
-  <div class="code">
-    <div class="row">
-      <span class="code__arrow red">&#8594; </span>
-      gem install sass
-    </div>
-    <div class="row">
-      <span class="code__arrow green">&#8594; </span>
-      sudo gem install sass
-    </div>
-    <div class="row">
-      <span class="code__arrow green">&#8594; </span>
-      sass -v
-    </div>
-  </div>
+  <pre class="language-bash"><code class="language-bash">gem install sass</code></pre>
+  <pre class="language-bash"><code class="language-bash">sudo gem install sass</code></pre>
+  <pre class="language-bash"><code class="language-bash">sass -v</code></pre>
 
-  <h2>Set up your project</h2>
+  <h2 class="code-header">Set up your project</h2>
   <p>Before you start using sass, it may be helpful to install <a class="inline" href="https://git-scm.com/" target="blank">git</a>, which will allow you to quickly and efficiently manage your project files. Here are a few quick commands to get you going:</p>
-  <div class="code">
-    <div class="row">
-      <span class="code__arrow green">&#8594; </span>
-      git init new-project
-    </div>
-    <div class="row">
-      <span class="code__arrow green">&#8594; </span>
-      cd new-project
-    </div>
-    <div class="row">
-      <span class="code__arrow green">&#8594; </span>
-      touch index.html styles.css styles.scss
-    </div>
-  </div>
+  <pre class="language-bash"><code class="language-bash">git init new-project</code></pre>
+  <pre class="language-bash"><code class="language-bash">cd new-project</code></pre>
+  <pre class="language-bash"><code class="language-bash">touch index.html styles.css styles.scss</code></pre>
 
-  <h2>Compile sass to css</h2>
+  <h2 class="code-header">Compile sass to css</h2>
   <p>Now that you have your files ready to go, you can start editing your stylesheet. Keep in mind, all of your edits will be done through your .scss file, never in your .css file. Run this command to compile your sass into css, then open your index file to view your changes.</p>
-  <div class="code">
-    <div class="row">
-      <span class="code__arrow green">&#8594; </span>
-      sass -w input.scss:output.css
-    </div>
-    <div class="row">
-      <span class="code__arrow green">&#8594; </span>
-      open index.html
-    </div>
-  </div>
+  <pre class="language-bash"><code class="language-bash">sass -w input.scss:output.css</code></pre>
+  <pre class="language-bash"><code class="language-bash">open index.html</code></pre>
 </section>
 
 <section class="row center-align" style="margin-top: 1rem;">
@@ -79,6 +50,16 @@
 <section class="row">
   <h2>Nesting & Parent Selectors</h2>
   <p>Nesting within Sass allows for a cleaner interface, as it helps avoid having to consistently type out the name of your parent selector. If you ever need to specifically target where the parent selector should be placed, the <span class="code-block">&</span> symbol will allow you to determine that placement.</p>
+  <pre class="language-html line-numbers">
+    <code class="language-html">
+      &lt;div class="card small"&gt;
+        &lt;h3 class="title"&gt;
+          Title
+        &lt;/h3&gt;
+      &lt;/div&gt;
+    </code>
+  </pre>
+
   <div class="code code--html">
     <ul class="code_number">
       <li>1</li>
