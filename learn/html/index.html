@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Learn Html</title>
   <link rel="stylesheet" type="text/css" href="../../styles/styles.css">
+  <script src="../../scripts/prism.js"></script>
 </head>
 
 <body class="blog">
@@ -48,12 +49,39 @@
     <pre class="language-html line-numbers">
       <code class="language-html">
         &lt;div&gt;
-          &lt;h2&gt;This is a header tag!&lt;h2&gt;
+          &lt;h2&gt;This is a header tag!&lt;/h2&gt;
           &lt;p&gt;This is a paragraph!&lt;/p&gt;
           &lt;input type="text"&gt;
         &lt;/div&gt;
       </code>
     </pre>
+  </section>
+  <section class="row">
+    <h2>Getting Started</h2>
+    <p>There are certain elements every HTML file has to start out with. These are written inside the <br><strong> head element</strong>, which gives the computer information, such as: what language you are using, viewport parameters, and where to look for your CSS stylesheets.</p>
+    <p>Here is an example of what almost every HTML file will start out looking like:</p>
+    <pre class="language-html line-numbers">
+      <code class="language-html">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+            &lt;title&gt;Learn Html&lt;/title&gt;
+            &lt;link rel="stylesheet" type="text/css" href="../styles/styles.css"&gt;
+          &lt;/head&gt;
+
+          &lt;body&gt;
+
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </section>
+  <section class="row">
+    <h2>Nesting</h2>
+    <p>Not only can an element contain content of its own but it can also contain other elements and most commonly does. Nesting is accomplished by indenting the lines that are contained inside the element.</p>
+    <p>An element that contains another element is called a <strong>Parent</strong> and the element that inside is called a <strong>Child</strong>. Elements that are on equal levels are called <strong>Siblings</strong>.</p>
   </section>
 </body>
 </html>
