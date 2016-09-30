@@ -2683,7 +2683,8 @@ pre[class*="language-"] {
   font-weight: 600;
   line-height: 1.2rem;
   padding: 1rem;
-  tom: 1.3rem;
+  padding-bottom: 1.1rem;
+  top: 0;
   position: relative;
   margin: 0.5rem 0 4rem 0;
   -moz-tab-size: 4;
@@ -2751,7 +2752,8 @@ pre[class*="language-"] {
 .token.tag,
 .token.constant,
 .token.symbol,
-.token.deleted {
+.token.deleted,
+.token.rule {
   color: #9DC0FF; }
 
 .token.boolean,
@@ -2763,15 +2765,15 @@ pre[class*="language-"] {
 .token.string,
 .token.char,
 .token.builtin,
-.token.inserted {
+.token.inserted,
+.token.variable {
   color: #C6C5FE; }
 
 .token.operator,
 .token.entity,
 .token.url,
 .language-css .token.string,
-.style .token.string,
-.token.variable {
+.style .token.string {
   color: #f8f8f2; }
 
 .token.atrule,

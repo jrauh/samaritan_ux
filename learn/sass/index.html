@@ -96,68 +96,37 @@
     }</code>
 </pre>
 
-  <h2>Variables</h2>
+  <h2 class="code-header">Variables</h2>
   <p>Variables offer a quick shortcut that can be reused throughout your stylesheet. By referencing the <span class="code-block">$</span> symbol, you are able to create a substitute that can be utilized anywhere within your project.</p>
-  <div class="code code--scss">
-    <ul class="code_number">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-    </ul>
-    <ul class="code_text">
-      <li><span class="purple">$primary-color</span>: #6A8DD3;</li>
-      <li>&nbsp;</li>
-      <li>.card {</li>
-      <li>&nbsp;&nbsp;border-color: <span class="purple">$primary-color</span>;</li>
-      <li>}</li>
-    </ul>
-  </div>
+<pre class="language-scss line-numbers">
+  <code class="language-scss">$primary-color: #6A8DD3;
 
-  <div class="code code--css">
-    <ul class="code_number">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-    </ul>
-    <ul class="code_text">
-      <li>.card {</li>
-      <li>&nbsp;&nbsp;border-color: #6A8DD3;</li>
-      <li>}</li>
-    </ul>
-  </div>
+    .card {
+      border-color: $primary-color;
+    }</code>
+</pre>
 
-  <h2>Mixins</h2>
+<pre class="language-css line-numbers">
+  <code class="language-css">.card {
+      border-color: #6A8DD3;
+    }</code>
+</pre>
+
+  <h2 class="code-header">Mixins</h2>
   <p>One easy way to use the <span class="code-block">@mixin</span> directive is to apply it for vendor prefixed elements. To create a mixin, simply define a mixin name and a variable, which will be passed to each vendor prefix. This can now be referenced anywhere within your project by using an <span class="code-block">@include</span>, followed by the mixin name and a desired value.</p>
-  <div class="code code--scss">
-    <ul class="code_number">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-      <li>11</li>
-    </ul>
-    <ul class="code_text">
-      <li><span class="blue">@mixin</span> user-select($value) {</li>
-      <li>&nbsp;&nbsp;-webkit-user-select: $value;</li>
-      <li>&nbsp;&nbsp;-moz-user-select: $value;</li>
-      <li>&nbsp;&nbsp;-ms-user-select: $value;</li>
-      <li>&nbsp;&nbsp;-o-user-select: $value;</li>
-      <li>&nbsp;&nbsp;user-select: $value;</li>
-      <li>}</li>
-      <li>&nbsp;&nbsp;</li>
-      <li>.card {</li>
-      <li>&nbsp;&nbsp;<span class="blue">@include</span> user-select(none);</li>
-      <li>}</li>
-    </ul>
-  </div>
+<pre class="language-css line-numbers">
+  <code class="language-css">@mixin user-select($value) {
+      -webkit-user-select: $value;
+      -moz-user-select: $value;
+      -ms-user-select: $value;
+      -o-user-select: $value;
+      user-select: $value;
+    }
+
+    .card {
+      @include user-select(none);
+    }</code>
+</pre>
 
   <div class="code code--css">
     <ul class="code_number">
