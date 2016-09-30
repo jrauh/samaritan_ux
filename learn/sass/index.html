@@ -39,7 +39,7 @@
 
   <h2 class="code-header">Compile sass to css</h2>
   <p>Now that you have your files ready to go, you can start editing your stylesheet. Keep in mind, all of your edits will be done through your .scss file, never in your .css file. Run this command to compile your sass into css, then open your index file to view your changes.</p>
-  <pre class="language-bash"><code class="language-bash">sass -w input.scss:output.css</code></pre>
+  <pre class="language-bash"><code class="language-bash">sass --watch input.scss:output.css</code></pre>
   <pre class="language-bash"><code class="language-bash">open index.html</code></pre>
 </section>
 
@@ -50,110 +50,51 @@
 <section class="row">
   <h2>Nesting & Parent Selectors</h2>
   <p>Nesting within Sass allows for a cleaner interface, as it helps avoid having to consistently type out the name of your parent selector. If you ever need to specifically target where the parent selector should be placed, the <span class="code-block">&</span> symbol will allow you to determine that placement.</p>
-  <pre class="language-html line-numbers">
-    <code class="language-html">
-      &lt;div class="card small"&gt;
-        &lt;h3 class="title"&gt;
-          Title
-        &lt;/h3&gt;
-      &lt;/div&gt;
-    </code>
-  </pre>
+<pre class="language-html line-numbers">
+  <code class="language-html">&lt;div class="card small"&gt;
+      &lt;h3 class="title"&gt;
+        Title
+      &lt;/h3&gt;
+    &lt;/div&gt;</code>
+</pre>
 
-  <div class="code code--html">
-    <ul class="code_number">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-    </ul>
-    <ul class="code_text">
-      <li>&lt;div class="card small"&gt;</li>
-      <li>&nbsp;&nbsp;&lt;h3 class="title"&gt;</li>
-      <li>&nbsp;&nbsp;&nbsp;&nbsp;Title</li>
-      <li>&nbsp;&nbsp;&lt;/h3&gt;</li>
-      <li>&lt;/div&gt;</li>
-    </ul>
-  </div>
+<pre class="language-scss line-numbers">
+  <code class="language-scss">.card {
+      background-color: #FFF;
+      width: 15rem;
 
-  <div class="code code--scss">
-    <ul class="code_number">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-      <li>11</li>
-      <li>12</li>
-      <li>13</li>
-      <li>14</li>
-      <li>15</li>
-      <li>16</li>
-    </ul>
-    <ul class="code_text">
-      <li>.card {</li>
-      <li>&nbsp;&nbsp;background-color: #FFF;</li>
-      <li>&nbsp;&nbsp;width: 15rem;</li>
-      <li>&nbsp;</li>
-      <li>&nbsp;&nbsp;<span class="blue">&</span>:hover {</li>
-      <li>&nbsp;&nbsp;&nbsp;&nbsp;opacity: .8;</li>
-      <li>&nbsp;&nbsp;}</li>
-      <li>&nbsp;</li>
-      <li>&nbsp;&nbsp;<span class="blue">&</span>.small {</li>
-      <li>&nbsp;&nbsp;&nbsp;&nbsp;width: 10rem;</li>
-      <li>&nbsp;&nbsp;}</li>
-      <li>&nbsp;</li>
-      <li>&nbsp;&nbsp;.title {</li>
-      <li>&nbsp;&nbsp;&nbsp;&nbsp;font-size: 1.2rem;</li>
-      <li>&nbsp;&nbsp;}</li>
-      <li>}</li>
-    </ul>
-  </div>
+      &:hover {
+        opacity: .8;
+      }
 
-  <div class="code code--css">
-    <ul class="code_number">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-      <li>11</li>
-      <li>12</li>
-      <li>13</li>
-      <li>14</li>
-      <li>15</li>
-      <li>16</li>
-    </ul>
-    <ul class="code_text">
-      <li>.card {</li>
-      <li>&nbsp;&nbsp;background-color: #FFF;</li>
-      <li>&nbsp;&nbsp;width: 15rem;</li>
-      <li>}</li>
-      <li>&nbsp;</li>
-      <li>.card:hover {</li>
-      <li>&nbsp;&nbsp;opacity: .8;</li>
-      <li>}</li>
-      <li>&nbsp;</li>
-      <li>.card.small {</li>
-      <li>&nbsp;&nbsp;width: 10rem;</li>
-      <li>}</li>
-      <li>&nbsp;</li>
-      <li>.card .title {</li>
-      <li>&nbsp;&nbsp;font-size: 1.2rem;</li>
-      <li>}</li>
-    </ul>
-  </div>
+      &.small {
+        width: 10rem;
+      }
+
+      .title {
+        font-size: 1.2rem;
+      }
+    }</code>
+</pre>
+
+<pre class="language-css line-numbers">
+  <code class="language-css">.card {
+      background-color: #FFF;
+      width: 15rem;
+    }
+
+    .card:hover {
+      opacity: .8;
+    }
+
+    .card.small {
+      width: 10rem;
+    }
+
+    .card .title {
+      font-size: 1.2rem;
+    }</code>
+</pre>
 
   <h2>Variables</h2>
   <p>Variables offer a quick shortcut that can be reused throughout your stylesheet. By referencing the <span class="code-block">$</span> symbol, you are able to create a substitute that can be utilized anywhere within your project.</p>

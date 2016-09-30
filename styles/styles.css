@@ -2683,6 +2683,7 @@ pre[class*="language-"] {
   font-weight: 600;
   line-height: 1.2rem;
   padding: 1rem;
+  tom: 1.3rem;
   position: relative;
   margin: 0.5rem 0 4rem 0;
   -moz-tab-size: 4;
@@ -2696,9 +2697,31 @@ pre[class*="language-"] {
 /* Code blocks */
 pre[class*="language-"] {
   padding: 1rem;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 1rem 0;
   overflow: auto;
   border-radius: 0.3rem; }
+  pre[class*="language-"]:before {
+    content: "";
+    border-radius: 3px;
+    color: #24292C;
+    line-height: 1rem;
+    opacity: .9;
+    padding: 0.2rem 0.2rem 0.3rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem; }
+
+pre.language-html:before {
+  content: "html";
+  background-color: #B6BBC2; }
+
+pre.language-scss:before {
+  content: "scss";
+  background-color: #dca5d0; }
+
+pre.language-css:before {
+  content: "css";
+  background-color: #F2E670; }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
@@ -2722,12 +2745,14 @@ pre[class*="language-"] {
 .namespace {
   opacity: .7; }
 
-.token.property,
+.token.property {
+  color: #FFFFB8; }
+
 .token.tag,
 .token.constant,
 .token.symbol,
 .token.deleted {
-  color: #f92672; }
+  color: #9DC0FF; }
 
 .token.boolean,
 .token.number {
@@ -2739,7 +2764,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-  color: #a6e22e; }
+  color: #C6C5FE; }
 
 .token.operator,
 .token.entity,
@@ -2752,14 +2777,14 @@ pre[class*="language-"] {
 .token.atrule,
 .token.attr-value,
 .token.function {
-  color: #e6db74; }
+  color: #a6e22e; }
 
 .token.keyword {
   color: #66d9ef; }
 
 .token.regex,
 .token.important {
-  color: #fd971f; }
+  color: #96CBFE; }
 
 .token.important,
 .token.bold {
@@ -2781,13 +2806,15 @@ pre.line-numbers > code {
 
 .line-numbers .line-numbers-rows {
   background-color: rgba(87, 93, 100, 0.8);
-  position: absolute;
+  padding: 1rem 0;
   pointer-events: none;
+  position: absolute;
   top: 0;
+  bottom: 0;
   font-size: 100%;
   left: -3rem;
-  width: 3rem;
-  /* works for line-numbers below 1000 lines */
+  width: 3.5rem;
+  /* works for line-numbers below 100 lines */
   letter-spacing: -1px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2801,36 +2828,10 @@ pre.line-numbers > code {
 
 .line-numbers-rows > span:before {
   content: counter(linenumber);
-  color: #999;
+  color: #B6BBC2;
   display: block;
   padding-right: 0.8em;
   text-align: right; }
-
-div.prism-show-language {
-  position: relative; }
-
-div.prism-show-language > div.prism-show-language-label {
-  color: black;
-  background-color: #CFCFCF;
-  display: inline-block;
-  position: absolute;
-  bottom: auto;
-  left: auto;
-  top: 0;
-  right: 0;
-  width: auto;
-  height: auto;
-  font-size: 0.9em;
-  border-radius: 0 0 0 5px;
-  padding: 0 0.5em;
-  text-shadow: none;
-  z-index: 1;
-  box-shadow: none;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
-  transform: none; }
 
 @font-face {
   font-family: 'dashing-icons';
