@@ -104,8 +104,9 @@ pre[class*="language-"] {
 .token.constant,
 .token.symbol,
 .token.deleted,
-.token.rule {
-	color: $blue-300;
+.token.rule,
+.token.keyword {
+	color: #96CBFE;
 }
 
 .token.boolean,
@@ -135,10 +136,6 @@ pre[class*="language-"] {
 .token.attr-value,
 .token.function {
 	color: #a6e22e;
-}
-
-.token.keyword {
-	color: #66d9ef;
 }
 
 .token.regex,

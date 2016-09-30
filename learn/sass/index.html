@@ -114,8 +114,8 @@
 
   <h2 class="code-header">Mixins</h2>
   <p>One easy way to use the <span class="code-block">@mixin</span> directive is to apply it for vendor prefixed elements. To create a mixin, simply define a mixin name and a variable, which will be passed to each vendor prefix. This can now be referenced anywhere within your project by using an <span class="code-block">@include</span>, followed by the mixin name and a desired value.</p>
-<pre class="language-css line-numbers">
-  <code class="language-css">@mixin user-select($value) {
+<pre class="language-scss line-numbers">
+  <code class="language-scss">@mixin user-select($value) {
       -webkit-user-select: $value;
       -moz-user-select: $value;
       -ms-user-select: $value;
@@ -128,83 +128,52 @@
     }</code>
 </pre>
 
-  <div class="code code--css">
-    <ul class="code_number">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-    </ul>
-    <ul class="code_text">
-      <li>.card {</li>
-      <li>&nbsp;&nbsp;-webkit-user-select: none;</li>
-      <li>&nbsp;&nbsp;-moz-user-select: none;</li>
-      <li>&nbsp;&nbsp;-ms-user-select: none;</li>
-      <li>&nbsp;&nbsp;-o-user-select: none;</li>
-      <li>&nbsp;&nbsp;user-select: none;</li>
-      <li>}</li>
-    </ul>
-  </div>
+<pre class="language-css line-numbers">
+  <code class="language-css">.card {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+    }</code>
+</pre>
 
-  <h2>Extend</h2>
+  <h2 class="code-header">Extend</h2>
   <p>The <span class="code-block">@extend</span> function allows one selector to inherit the styles of another selector. This can be especially useful when one class utilizes all of another class's styles, along with some of its own specific styles.</p>
-  <div class="code code--scss">
-    <ul class="code_number">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-      <li>11</li>
-    </ul>
-    <ul class="code_text">
-      <li>.column {</li>
-      <li>&nbsp;&nbsp;padding: 1rem;</li>
-      <li>&nbsp;&nbsp;float: left;</li>
-      <li>&nbsp;&nbsp;margin: 0;</li>
-      <li>&nbsp;&nbsp;width: 100%;</li>
-      <li>}</li>
-      <li>&nbsp;</li>
-      <li>.column-half {</li>
-      <li>&nbsp;&nbsp;<span class="orange">@extend</span> .column;</li>
-      <li>&nbsp;&nbsp;width: 50%;</li>
-      <li>}</li>
-    </ul>
-  </div>
-  <div class="code code--css">
-    <ul class="code_number">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
-      <li>7</li>
-      <li>8</li>
-      <li>9</li>
-      <li>10</li>
-    </ul>
-    <ul class="code_text">
-      <li>.column, .column-half {</li>
-      <li>&nbsp;&nbsp;padding: 1rem;</li>
-      <li>&nbsp;&nbsp;float: left;</li>
-      <li>&nbsp;&nbsp;margin: 0;</li>
-      <li>&nbsp;&nbsp;width: 100%;</li>
-      <li>}</li>
-      <li>&nbsp;</li>
-      <li>.column-half {</li>
-        <li>&nbsp;&nbsp;width: 50%;</li>
-      <li>}</li>
-    </ul>
-  </div>
+
+<pre class="language-scss line-numbers">
+  <code class="language-scss">/* Sass Input */
+    .column {
+      padding: 1rem;
+      float: left;
+      margin: 0;
+      width: 100%;
+    }
+
+    .column-half {
+      @extend .column;
+      width: 50%;
+    }</code>
+</pre>
+
+<pre class="language-css line-numbers">
+  <code class="language-css">/* CSS Output */
+    .column {
+      padding: 1rem;
+      float: left;
+      margin: 0;
+      width: 100%;
+    }
+
+    .column-half {
+      padding: 1rem;
+      float: left;
+      margin: 0;
+      width: 100%;
+      width: 50%;
+    }</code>
+</pre>
+
 </section>
 
 </body>
