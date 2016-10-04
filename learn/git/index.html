@@ -60,15 +60,15 @@
   <section class="row">
     <h2 class="code-header">Pushing up changes to the repository</h2>
     <p>Now that we've created a new file, we're ready to push that up and make it available to everyone on the team.</p>
-    <h3 class="code-header">Check the status</h3>
+    <h3>Check the status</h3>
     <p>It's always good practice to check the status of your changes. Running this show us what files we've altered.</p>
     <pre class="language-bash"><code class="language-bash">git status</code></pre>
 
-    <h3 class="code-header">Remove a File</h3>
+    <h3>Remove a File</h3>
     <p>Let's say we no longer wanted that <span class="inline-code">README.md</span> file for some reason. Using this command, you can easily remove any file right from your terminal.</p>
     <pre class="language-bash"><code class="language-bash">rm -r README.md</code></pre>
 
-    <h3 class="code-header">Stage files</h3>
+    <h3>Stage files</h3>
     <p>Let's say we didn't remove that file. We put a lot of work into this, and actually want to get this pushed up to our team. There are a few ways you can add, or stage, files to be comitted.</p>
     <h4>Add a single file</h4>
     <pre class="language-bash"><code class="language-bash">git add README.md</code></pre>
@@ -77,19 +77,21 @@
     <h4>Add all files</h4>
     <pre class="language-bash"><code class="language-bash">git add .</code></pre>
 
-    <h3 class="code-header">Commit</h3>
+    <h3>Commit</h3>
     <p>Now that you have your files staged, you can commit them to be pushed. You'll need to make sure to add a message so others know what changes you made.</p>
     <pre class="language-bash"><code class="language-bash">git commit -m "Added README file"</code></pre>
 
-    <h3 class="code-header">Push</h3>
+    <h3>Push</h3>
     <p>You're ready to push! Type this command to send it up.</p>
     <pre class="language-bash"><code class="language-bash">git push</code></pre>
 
   </section>
 
-  <!-- <section class="row">
-    <h2>Remove a file</h2>
-    <pre class="language-bash"><code class="language-bash">rm -r</code></pre>
-  </section> -->
+  <section class="row">
+    <h2 class="code-header">Pull</h2>
+    <p>Because other teammates may be working on the same project, you'll want to make sure to pull in their changes. This will make sure you're always up to date.</p>
+    <pre class="language-bash"><code class="language-bash">git pull</code></pre>
+  </section>
+
 </body>
 </html>
