@@ -2490,7 +2490,7 @@ section {
   padding: 1rem; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #575D64; }
+  color: #41464B; }
   h1.bower, .bower h1, h2.bower, .bower h2, h3.bower, .bower h3, h4.bower, .bower h4, h5.bower, .bower h5, h6.bower, .bower h6 {
     color: #FFCC2F; }
   h1.sass, .sass h1, h2.sass, .sass h2, h3.sass, .sass h3, h4.sass, .sass h4, h5.sass, .sass h5, h6.sass, .sass h6 {
@@ -2503,6 +2503,9 @@ h1, h2, h3, h4, h5, h6 {
     color: #7FDBFF; }
   h1.trello, .trello h1, h2.trello, .trello h2, h3.trello, .trello h3, h4.trello, .trello h4, h5.trello, .trello h5, h6.trello, .trello h6 {
     color: #0077C3; }
+
+h3 {
+  margin-top: 2rem; }
 
 .button-transparent.button--bower {
   background-color: rgba(255, 255, 255, 0);
@@ -2597,7 +2600,7 @@ a.inline {
     opacity: .6; }
 
 p {
-  color: #575D64;
+  color: #41464B;
   font-size: 1rem;
   line-height: 1.5rem; }
 
@@ -2611,8 +2614,28 @@ header.hero {
     font-size: 2.5rem;
     text-align: center; }
 
-h2.code-header {
+h2.code-header,
+h3.code-header {
   margin-top: 3rem; }
+
+.inline-code {
+  background-color: #B6BBC2;
+  border-radius: 3px;
+  color: #3B3B3B;
+  padding: 0.2rem 0.5rem; }
+
+.note {
+  background-color: #C4C8CD;
+  border-radius: 5px;
+  display: block;
+  padding: 1rem;
+  margin: 1.5rem 0; }
+  .note h4, .note p {
+    color: #3B3B3B;
+    display: inline-block;
+    margin: 0; }
+  .note .inline-code {
+    background-color: rgba(156, 163, 170, 0.7); }
 
 /* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+bash+git+scss&plugins=line-numbers+show-language */
 /**

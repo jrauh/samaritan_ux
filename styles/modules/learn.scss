@@ -61,13 +61,17 @@ section {
 }
 
 h1, h2, h3, h4, h5, h6{
-  color: $gray-700c;
+  color: $gray-800c;
   &.bower, .bower & { color: $color--bower; } //#FFD235
   &.sass, .sass & { color: $color--sass; }
   &.git, .git & { color: $color--git; }
   &.html, .html & { color: $color--html; }
   &.css, .css & { color: $color--css; }
   &.trello, .trello & { color: $color--trello; }
+}
+
+h3 {
+  margin-top: 2rem;
 }
 
 .button-transparent.button--bower {
@@ -117,7 +121,7 @@ a {
 }
 
 p {
-  color: $gray-700c;
+  color: $gray-800c;
   font-size: 1rem;
   line-height: 1.5rem;
 }
@@ -136,6 +140,31 @@ header {
   }
 }
 
-h2.code-header {
+h2.code-header,
+h3.code-header {
   margin-top: 3rem;
+}
+
+.inline-code {
+  background-color: $gray-300c;
+  border-radius: 3px;
+  color: $gray-800;
+  padding: 0.2rem 0.5rem;
+}
+
+.note {
+  background-color: $gray-250c;
+  border-radius: 5px;
+  display: block;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  h4, p {
+    color: $gray-800;
+    display: inline-block;
+    margin: 0;
+  }
+
+  .inline-code {
+    background-color: rgba($gray-400c, .7);
+  }
 }

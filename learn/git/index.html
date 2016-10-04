@@ -21,7 +21,75 @@
   </header>
 
   <section class="row center-align" style="margin-top: 1rem;">
-    <h1>Git Setup</h1>
+    <h1>Git Basics</h1>
   </section>
+
+  <section class="row">
+    <h2>Install Git</h2>
+    <p>Git comes standard on all Macs. If you're running Windows, you'll have to intall git yourself first. To check what version of git you have installed, run this helpful command:</p>
+    <pre class="language-bash"><code class="language-bash">git --version</code></pre>
+  </section>
+
+  <section class="row">
+    <h2 class="code-header">Create a Repository</h2>
+    <p>A repository is simply a location where all your project files are stored. Git allows us to version control these files, to allow for a cleaner workflow. There are two ways you can create a repository with git.</p>
+    <h3>Create a repository from scratch</h3>
+    <p>Let's say you want to create a new project called "timeless_nightfall". To get started, all you need to do is type this command:</p>
+    <pre class="language-bash"><code class="language-bash">git init timeless_nightfall</code></pre>
+    <p>A new folder will be created in your chosen directory with the name "timeless_nightfall".</p>
+
+    <h3>Create a repository from an existing folder</h3>
+    <p>What if you had already started the project? No worries. You can easily convert any exisiting project folder to a git repository by running this command. (Just be sure you are in that project's home directory).</p>
+    <pre class="language-bash"><code class="language-bash">git init</code></pre>
+
+    <div class="note">
+      <h4>Note:</h4>
+      <p>Using the <span class="inline-code">git init</span> command will create a hidden <span class="inline-code">.git</span> file in your folder. To see this and other hidden files, run <span class="inline-code">ls -a</span>.</p>
+    </div>
+  </section>
+
+  <section class="row">
+    <h2 class="code-header">Create a File</h2>
+    <p>Let's make a quick addition to our project. First, let's make sure we're in our project file's home directory. Let's use the project we just created.</p>
+    <pre class="language-bash"><code class="language-bash">cd timeless_nightfall</code></pre>
+    <p><span class="inline-code">cd</span> stands for "Change Directory". We're telling our terminal to take us into the project folder "timeless_nightfall".</p>
+    <p>Now that we're in our project's home directory, let's create a readme file.</p>
+    <pre class="language-bash"><code class="language-bash">touch README.md</code></pre>
+  </section>
+
+  <section class="row">
+    <h2 class="code-header">Pushing up changes to the repository</h2>
+    <p>Now that we've created a new file, we're ready to push that up and make it available to everyone on the team.</p>
+    <h3 class="code-header">Check the status</h3>
+    <p>It's always good practice to check the status of your changes. Running this show us what files we've altered.</p>
+    <pre class="language-bash"><code class="language-bash">git status</code></pre>
+
+    <h3 class="code-header">Remove a File</h3>
+    <p>Let's say we no longer wanted that <span class="inline-code">README.md</span> file for some reason. Using this command, you can easily remove any file right from your terminal.</p>
+    <pre class="language-bash"><code class="language-bash">rm -r README.md</code></pre>
+
+    <h3 class="code-header">Stage files</h3>
+    <p>Let's say we didn't remove that file. We put a lot of work into this, and actually want to get this pushed up to our team. There are a few ways you can add, or stage, files to be comitted.</p>
+    <h4>Add a single file</h4>
+    <pre class="language-bash"><code class="language-bash">git add README.md</code></pre>
+
+    <p>If you had multiple changes to your project, you can just add them all at once.</p>
+    <h4>Add all files</h4>
+    <pre class="language-bash"><code class="language-bash">git add .</code></pre>
+
+    <h3 class="code-header">Commit</h3>
+    <p>Now that you have your files staged, you can commit them to be pushed. You'll need to make sure to add a message so others know what changes you made.</p>
+    <pre class="language-bash"><code class="language-bash">git commit -m "Added README file"</code></pre>
+
+    <h3 class="code-header">Push</h3>
+    <p>You're ready to push! Type this command to send it up.</p>
+    <pre class="language-bash"><code class="language-bash">git push</code></pre>
+
+  </section>
+
+  <!-- <section class="row">
+    <h2>Remove a file</h2>
+    <pre class="language-bash"><code class="language-bash">rm -r</code></pre>
+  </section> -->
 </body>
 </html>
