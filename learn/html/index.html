@@ -39,11 +39,12 @@
       &lt;p&gt;This is a paragraph!&lt;/p&gt;
     &lt;/div&gt;</code>
 </pre>
+    <p>Ideally you are using the <a href="https://teamtreehouse.com/library/how-to-make-a-website">TeamTreehouse course</a> that we recommend to start your learning process. This page is meant to aid you in learning HTML and is not a stand alone resource. Our hope is to help you understand the basics and elaborate on harder to understand aspects.</p>
   </section>
-  
+
   <section class="row">
     <h2>Elements</h2>
-    <p>HTML is made up of elements. An element is an individual component usually surrounded by similar looking <strong>tags</strong>. You can determine the type of element and what it contains by looking at the opening and closing tags. A closing tag includes a "/" at the beginning of it..</p>
+    <p>HTML is made up of elements. An element is an individual component usually surrounded by similar looking <strong>tags</strong>. You can determine the type of element and what it contains by looking at the opening and closing tags. A closing tag includes a "/" at the beginning of it.</p>
     <p>Beware, not all elements require a closing tag.</p>
 <pre class="language-html line-numbers">
   <code class="language-html">&lt;div&gt;
@@ -55,7 +56,7 @@
   </section>
   <section class="row">
     <h2>Getting Started</h2>
-    <p>There are certain elements every HTML file has to start out with. These are written inside the <br><strong> head element</strong>, which gives the computer information, such as: what language you are using, viewport parameters, and where to look for your CSS stylesheets.</p>
+    <p>There are certain elements every HTML file has to start out with. These are written inside the <strong> head element</strong>, which gives the computer information, such as: what language you are using, viewport parameters, and where to look for your CSS stylesheets.</p>
     <p>Here is an example of what almost every HTML file will start out looking like:</p>
 <pre class="language-html line-numbers">
   <code class="language-html">&lt;!DOCTYPE html&gt;
@@ -72,11 +73,42 @@
       &lt;/body&gt;
     &lt;/html&gt;</code>
 </pre>
+    <p>It could be helpful to bookmark this page to access the sample above quickly. Copying and pasting it at the beginning of your HTML document is a quick way to get to the enjoyable part of writing in HTML. Plus it's just easier when you don't have to try and remember this while you are learning to code.</p>
+  </section>
+  <section class="row center-align" style="margin-top: 1rem;">
+    <h1>Clean Coding</h1>
   </section>
   <section class="row">
     <h2>Nesting</h2>
     <p>Not only can an element contain content of its own but it can also contain other elements and most commonly does. Nesting is accomplished by indenting the lines that are contained inside the element.</p>
     <p>An element that contains another element is called a <strong>Parent</strong> and the element that inside is called a <strong>Child</strong>. Elements that are on equal levels are called <strong>Siblings</strong>.</p>
+<pre class="language-html line-numbers">
+  <code class="language-html">&lt;div&gt;I'm the Parent Element!!!
+      &lt;h2&gt;I'm a child!&lt;/h2&gt;
+      &lt;p&gt;I'm a child and siblings with the h2 tag above me!&lt;/p&gt;
+    &lt;/div&gt;</code>
+</pre>
+  </section>
+  <section class="row">
+    <h2>Commenting</h2>
+    <p>There is one element in HTML that is not displayed in the browser. This is the comment element. Just like every other element in HTML you use an opening and closing tag to tell the browser that it's a comment and should not be displayed. </p>
+<pre class="language-html line-numbers">
+  <code class="language-html">&lt;!--Example paragraph section of code--&gt;
+    &lt;section class="row"&gt;
+      &lt;h2&gt;Nesting&lt;/h2&gt;
+      &lt;p&gt;This the paragraph on Nesting. Its long so I made it shorter.&lt;/p&gt;
+      &lt;p&gt;Paragraph &lt;strong&gt;Parent&lt;/strong&gt; Sample called a &lt;strong&gt;Child&lt;/strong&gt;. Example &lt;strong&gt;Siblings&lt;/strong&gt;.&lt;/p&gt;
+      &lt;!--example code section of Nesting--&gt;
+  &lt;pre class="language-html line-numbers"&gt;
+    &lt;code class="language-html"&gt;&lt;div&gt;I'm the Parent Element!!!
+        &lt;h2&gt;I'm a child!&lt;/h2&gt;
+        &lt;p&gt;I'm a child and siblings with the h2 tag above me!&lt;/p&gt;
+      &lt;/div&gt;&lt;/code&gt;
+  &lt;/pre&gt;
+    &lt;/section&gt;
+    &lt;!--Example section ends--&gt;</code>
+</pre>
+    <p>If you make comments in your HTML as you go, then it will be infinitely easier to find it later. This is super useful as you continue to build and maintain as you build.</p>
   </section>
 </body>
 </html>
