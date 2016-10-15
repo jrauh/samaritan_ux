@@ -1,9 +1,3 @@
-.hero .button {
-  position: absolute;
-  top: 2.5rem;
-  left: 2rem;
-}
-
 //GRID
 .column--learn {
   @extend .column;
@@ -130,12 +124,25 @@ header {
   &.hero {
     background-color: $white;
     border: none;
-    height: auto;
+    height: 7rem;
     padding: 2rem;
-    position: static;
+    position:fixed;
+    top: 0;
+    left:0;
+    right:0;
+    z-index: 3;
+    transition: top 0.2s ease-in-out;
     h1 {
       font-size: 2.5rem;
       text-align: center;
+    }
+    .button {
+      position: absolute;
+      top: 2.5rem;
+      left: 2rem;
+    }
+    &.nav-up {
+      top: -7rem;
     }
   }
 }
@@ -143,6 +150,10 @@ header {
 h2.code-header,
 h3.code-header {
   margin-top: 3rem;
+}
+
+.page-top-margin {
+  margin-top: 7rem;
 }
 
 .inline-code {

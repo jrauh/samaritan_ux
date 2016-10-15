@@ -2483,11 +2483,6 @@ ul {
 body.blog .row {
   max-width: 40rem; }
 
-.hero .button, .hero .file--custom {
-  position: absolute;
-  top: 2.5rem;
-  left: 2rem; }
-
 .column--learn {
   float: left;
   width: 50%; }
@@ -2664,16 +2659,30 @@ p {
 header.hero {
   background-color: #FFFFFF;
   border: none;
-  height: auto;
+  height: 7rem;
   padding: 2rem;
-  position: static; }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  transition: top 0.2s ease-in-out; }
   header.hero h1 {
     font-size: 2.5rem;
     text-align: center; }
+  header.hero .button, header.hero .file--custom {
+    position: absolute;
+    top: 2.5rem;
+    left: 2rem; }
+  header.hero.nav-up {
+    top: -7rem; }
 
 h2.code-header,
 h3.code-header {
   margin-top: 3rem; }
+
+.page-top-margin {
+  margin-top: 7rem; }
 
 .inline-code {
   background-color: #B6BBC2;
