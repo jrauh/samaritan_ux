@@ -27,7 +27,7 @@
 
   <section class="row">
     <h2>Introduction to CSS</h2>
-    <p>By now you know how to write in HTML, which sets the structure and format of a webpage. Once you have done this, you now need to tell the browser how to display the information you information you have given it. You will use CSS to do this! CSS stands <u>C</u>ascading <u>S</u>tyle <u>S</u>heets.</p>
+    <p>By now you know how to write in HTML, which sets the structure and format of a webpage. Once you have done this, you now need to tell the browser how to display the information you have given it. You will use CSS to do this! CSS stands <u>C</u>ascading <u>S</u>tyle <u>S</u>heets.<br><br>CSS is a language that allows you to target elements in your HTML by either, using the generic name of elements or targeting a specific element by giving it a class or ID. Once you have done this you can give them the attributes you desire to style the web pages you are creating.</p>
 <pre class="language-css line-numbers">
   <code class="language-css">p {
       text-height: 2rem;
@@ -49,6 +49,49 @@
       width:auto;
     }</code>
 </pre>
+    <p>The important thing to remember about CSS is the "Cascading" part of it. This means that if you use the same selector twice, the one that is further down the style sheet will over ride the first one. We call this having more "specificity".<br>
+    <br>
+    In this example, the background color will be blue since it is at the bottom, but it will keep the width of 100%.</p>
+<pre class="language-css line-numbers">
+  <code class="language-css">div {
+      width: 100%;
+      background: white;
+    }
+
+    div {
+      background: blue;
+    }</code>
+</pre>
+    <p>Since there is nothing to override the width attribute, it will not be changed unless something more "specific" is written for div.</p>
   </section>
+  <section class="row">
+    <h2>Syntax</h2>
+    <p>The format you will write CSS in is very easy and repetitive. You first list the element, id, or class that you are going to target, then open up curly braces. Inside the curly braces you list the attribute you wish to add or change with a semi-colon separating it from the value and end with colon. Repeat this for as many attributes are you want, making sure it is all closed up with the correct curly brace. Look at the examples below as a reference. It will also show you how to identify classes and ID's.</p>
+<pre class="language-css line-numbers">
+    <code class="language-css">element {
+        width: auto;
+        height: auto;
+        font-size: 18px;
+      }
+
+      .class {
+        width: 10%;
+        border: 10px dotted blue;
+      }
+
+      #id {
+        display: none;
+        background-color: #aacc55;
+      }</code>
+</pre>
+    <p>We have told you how to target classes and ID's in CSS, but we haven't told you have to label elements in HTML with them. You put these labels in the open tag of the element that you wish to target by adding <strong>class=""</strong> with the name of the class inside the quotes. The same goes for ID's by you write <strong>id=""</strong> instead. Pretty simple!</p>
+<pre class="language-html line-numbers">
+  <code class="language-html"><div class="class-1">
+      <h3 id="random-name">I can call them anything!</h3>
+      <p>Don't forget hyphens if you use multiple words</p>
+    </div></code>
+</pre>
+  </section>
+</pre>
 </body>
 </html>
