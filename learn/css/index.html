@@ -64,6 +64,7 @@
 </pre>
     <p>Since there is nothing to override the width attribute, it will not be changed unless something more "specific" is written for div.</p>
   </section>
+
   <section class="row">
     <h2>Syntax</h2>
     <p>The format you will write CSS in is very easy and repetitive. You first list the element, id, or class that you are going to target, then open up curly braces. Inside the curly braces you list the attribute you wish to add or change with a semi-colon separating it from the value and end with colon. Repeat this for as many attributes are you want, making sure it is all closed up with the correct curly brace. Look at the examples below as a reference. It will also show you how to identify classes and ID's.</p>
@@ -91,7 +92,18 @@
       &lt;p&gt;Don't forget hyphens if you use multiple words&lt;/p&gt;
     &lt;/div&gt;</code>
 </pre>
+    <p>Now, sometimes you may need to be even more specific that a particular class or id to target the exact element in your HTML. You can this in a number of ways. The best way to show this to you is to just write some CSS with some greate comments in the document. Here are two of the most common ways to target more specifically:</p>
+<pre class="language-css line-numbers">
+  <code class="language-css">div, p {
+      /*This is doing to target ALL <div> and <p> elements in your HTML*/
+    }
+
+    div p {
+      /*
+    }</code>
+</pre>
   </section>
+
   <section class="row">
     <h2>Commenting</h2>
     <p>Just like in HTML you can leave comments in CSS to help keep track of your styles. These won't effect the styles you are writing for your webpage at all but really help keep your code organized for when you have to return to it.<br><br>Here is an example:</p>
@@ -104,6 +116,7 @@
     }</code>
 </pre>
   </section>
+
   <section class="row">
     <h2>Measurements</h2>
     <p>There are many different measurements used in CSS. Many of them you will be familiar with, such as, percentages, centimeters, inches, millimeters, and pixels. These are also a few of the most common ones.<br><br>Others that you will see quite often are <strong>em</strong> and <strong>rem</strong>.<br><br>An <strong>em</strong> is a unit that is relative to the parent's point or pixel size, whereas a <strong>rem</strong> is a unit whose size is defined by the <code class="language-css">&lt;html&gt;</code> tag.</p>
